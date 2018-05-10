@@ -1,5 +1,6 @@
 package SanityTest;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 //import org.openqa.selenium.By;
@@ -12,10 +13,10 @@ public class AdminLogin {
 	public static void main(String[] args)
 	{
 		//System.setProperty("webdriver.gecko.driver", "/home/vijaya/Selinium/geckodriver");
-		System. setProperty("webdriver.chrome.driver", "/home/vijaya/Selinium/chromedriver");
+		System. setProperty("webdriver.chrome.driver", "C:\\Windows\\chromedriver_win32\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions(); 
 		options.addArguments("disable-infobars"); 
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.gcrit.com/build3/admin/login.php");
 		/*driver.findElement(By.name("username")).sendKeys("admin");
 		driver.findElement(By.name("password")).sendKeys("admin@123");
@@ -33,12 +34,12 @@ public class AdminLogin {
 		}
 		
 		driver.close();*/
-		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS) ;
+		/*driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS) ;
 		driver.navigate().to("https://accounts.google.com");
 		driver.navigate().back();
 	    driver.getCurrentUrl();
 		System.out.println(driver.getCurrentUrl());
-		driver.navigate().forward();
+		driver.navigate().forward();*/
 	} 
 }
 
